@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2_zadacha_na_vibor", "2_zad
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "programm_exe", "programm_exe\programm_exe.vcxproj", "{496E2A4A-5A92-4FD2-B494-A2B60F1D3F78}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zadacha_iz++_klassa", "zadacha_iz++_klassa\zadacha_iz++_klassa.vcxproj", "{24CA1105-40F2-4360-A5B9-B0DE0C1F76F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -131,6 +133,14 @@ Global
 		{496E2A4A-5A92-4FD2-B494-A2B60F1D3F78}.Release|x64.Build.0 = Release|x64
 		{496E2A4A-5A92-4FD2-B494-A2B60F1D3F78}.Release|x86.ActiveCfg = Release|Win32
 		{496E2A4A-5A92-4FD2-B494-A2B60F1D3F78}.Release|x86.Build.0 = Release|Win32
+		{24CA1105-40F2-4360-A5B9-B0DE0C1F76F0}.Debug|x64.ActiveCfg = Debug|x64
+		{24CA1105-40F2-4360-A5B9-B0DE0C1F76F0}.Debug|x64.Build.0 = Debug|x64
+		{24CA1105-40F2-4360-A5B9-B0DE0C1F76F0}.Debug|x86.ActiveCfg = Debug|Win32
+		{24CA1105-40F2-4360-A5B9-B0DE0C1F76F0}.Debug|x86.Build.0 = Debug|Win32
+		{24CA1105-40F2-4360-A5B9-B0DE0C1F76F0}.Release|x64.ActiveCfg = Release|x64
+		{24CA1105-40F2-4360-A5B9-B0DE0C1F76F0}.Release|x64.Build.0 = Release|x64
+		{24CA1105-40F2-4360-A5B9-B0DE0C1F76F0}.Release|x86.ActiveCfg = Release|Win32
+		{24CA1105-40F2-4360-A5B9-B0DE0C1F76F0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
