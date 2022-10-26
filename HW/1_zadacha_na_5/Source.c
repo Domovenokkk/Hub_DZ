@@ -10,17 +10,11 @@ void PrintMenu() {
 	printf("\n\t1)Найти максимум массива.");
 	printf("\n\t2)Найти минимум массива.");
 	printf("\n\t3)Найти среднее арифметическое массива.");
+	printf("\n\t4)Вывести массив");
 }
 
 void GenerateMass(int size, int* mass) {
 	int i;
-	printf("Добро пожаловать!");
-	Sleep(500);
-	system("cls");
-	printf("Введите размер массива - ");
-	scanf_s("%d", &size);
-	Sleep(500);
-	system("cls");
 	srand(time(0));
 	printf("Ваш массив =");
 	for (i = 0; i < size; i++) {
@@ -59,12 +53,26 @@ void SrArifMass(int size, int* mass) {
 	printf("%f", srdarf);
 }
 
+void PrintfMass(int size, int* mass) {
+	int i;
+	for (i = 0; i < size; i++) {
+		printf("%d ", mass[i]);
+	}
+}
+
 
 
 int main() {
 	setlocale(LC_ALL, "russian");
 	int* mass;
-	int size = 10, num;
+	int size, num;
+	printf("Добро пожаловать!");
+	Sleep(500);
+	system("cls");
+	printf("Введите размер массива - ");
+	scanf_s("%d", &size);
+	Sleep(500);
+	system("cls");
 	mass = (int*)malloc(sizeof(int) * size);
 	GenerateMass(size, mass);
 	PrintMenu();
@@ -79,5 +87,10 @@ int main() {
 	else if (num == 3) {
 		SrArifMass(size, mass);
 	}
+	else if (num == 4) {
+		PrintfMass(size, mass);
+	}
 	return 0;
 }
+
+

@@ -4,7 +4,8 @@
 #include <windows.h>
 int main() {
 	setlocale(LC_ALL, "russian");
-	int figur, side1, side2, task, square, perimetr, diag, side3, radius, diametr;
+	int figur, side1, side2, task, square, perimetr, diag, side3, radius, diametr, flag;
+	flag = 0;
 	float pi, dlina_okr, square_okr;
 	pi = 3.14;
 	printf("Добро пожаловать!");
@@ -17,7 +18,6 @@ link1:
 	printf("\nВвод: ");
 	scanf_s("%d", &figur);
 	system("cls");
-
 	if (figur == 1) {
 		printf("Введите две стороны прямоугольника: ");
 		scanf_s("%d %d", &side1, &side2);
@@ -49,9 +49,8 @@ link1:
 		else if (task == 0) {
 			return 0;
 		}
-
 	}
-
+	
 	if (figur == 2) {
 		printf("Введите две стороны прямоугольного треугольника: ");
 		scanf_s("%d %d", &side1, &side2);
@@ -78,7 +77,7 @@ link1:
 		}
 		else if (task == 0) {
 			return 0;
-        }
+		}
 	}
 
 	if (figur == 3) {
@@ -113,6 +112,5 @@ link1:
 			printf("Диаметр окружности = %d", diametr);
 		}
 	}
-
 	return 0;
 }

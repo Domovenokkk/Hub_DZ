@@ -3,47 +3,37 @@
 #include <malloc.h>
 #include <locale.h>
 #include <windows.h>
-#pragma warning (disable:4996)
 
-void GetStr1(char* str1, int* size1) {
-	*size1 = 0;
-	printf("\nВведите первый отрывок: ");
-	gets(str1);
-	while (str1[(*size1)] != '\0') {
-		(*size1)++;
+void sli(char* stroka1, char* stroka2, char* stroka3) {
+	int size1 = 0, size2 = 0, size3 = 0, i = 0;
+	printf("Введите первую строку: ");
+	gets(stroka1);
+	while (stroka1[(size1)] != '\0') {
+		(size1)++;
 	}
-}
-
-void GetStr2(char* str2, int* size2) {
-	*size2 = 0;
-	printf("\nВведите второй отрывок: ");
-	gets(str2);
-	while (str2[(*size2)] != '\0') {
-		(*size2)++;
+	printf("Введите вторую строку: ");
+	gets(stroka2);
+	while (stroka2[(size2)] != '\0') {
+		(size2)++;
 	}
-}
-
-void Hello() {
-	printf("Добро пожаловать!");
-	printf("\nДанная программа позволит вам объеденить две строки в одну.");
-	printf("\nНужно ввести два отрывка.");
-}
-
-void Printf3(char* str1, char* str2, int* size1, int* size2) {
-	printf("%s %s", str1, str2);
-
+	size3 = size1 + size2 + 1;
+	for (i = 0; i < size1; i++) {
+		stroka3[i] = stroka1[i];
+	}
+	stroka3[i] = ' ';
+	for (int j = i + 1; j - i - 1 < size2; j++) {
+		stroka3[j] = stroka2[j - i - 1];
+	}
+	printf("Результат: ");
+	for (int i = 0; i < size3; i++) {
+		printf("%c", stroka3[i]);
+	}
 }
 
 int main() {
 	setlocale(LC_ALL, "russian");
-	char* str1 = (char*)malloc(sizeof(char) * 10000);
-	char* str2 = (char*)malloc(sizeof(char) * 10000);
-	int* size1;
-	int* size2;
-	Hello();
-	Sleep(1000);
-	GetStr1(str1, &size1);
-	GetStr2(str2, &size2);
-    printf("\nРезультат объединения: ");
-	Printf3(str1, str2, &size1, &size2);
+	char* stroka1 = (char*)malloc(sizeof(char) * 10000);
+	char* stroka2 = (char*)malloc(sizeof(char) * 10000);
+	char* stroka3 = (char*)malloc(sizeof(char) * 20001);
+	sli(stroka1, stroka2, stroka3);
 }
